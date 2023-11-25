@@ -1,0 +1,240 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      padding-top: 30px;
+      min-height: 70px;
+      border-bottom: #bbb 1px solid;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    header ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    header #logo {
+      text-align: center;
+      padding-top: 20px;
+      width: 20%;
+      float: left;
+    }
+
+    header #logo img {
+      width: 60%;
+    }
+
+    header #name {
+      text-align: center;
+      padding-top: 30px;
+      width: 60%;
+      float: left;
+    }
+
+    header #name h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header #name span {
+      font-weight: bold;
+      color: #bbb;
+    }
+
+    header #signin {
+      width: 20%;
+      float: right;
+    }
+
+    header #signin form {
+      display: inline;
+    }
+
+    header .handle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      header #menu {
+        display: none;
+      }
+
+      header .handle {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: #004080;
+        padding: 10px 0;
+        color: white;
+        font-size: 1.5em;
+      }
+
+      header ul {
+        display: none;
+      }
+
+      header ul.expanded {
+        display: block;
+      }
+
+      header li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        display: block;
+      }
+    }
+
+    section {
+      float: left;
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    section #main {
+      float: left;
+      width: 70%;
+      padding: 20px 0;
+    }
+
+    section #sidebar {
+      float: left;
+      width: 30%;
+      padding: 20px 0;
+    }
+
+    section #sidebar h2 {
+      background: #004080;
+      padding: 10px;
+      color: white;
+    }
+
+    section #sidebar ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    section #sidebar li {
+      padding: 10px;
+      border-bottom: #bbb 1px solid;
+    }
+
+    section #sidebar a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #004080;
+      color: white;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    section #main form {
+      margin-top: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section #main form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    section #main form input,
+    section #main form select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    section #main form button {
+      background: #004080;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    section #main form button:hover {
+      background: #003366;
+    }
+
+    section #loginForm {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+}
+
+    section #loginForm label {
+      display: block;
+      margin-bottom: 8px;
+  }
+
+    section #loginForm input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    section #loginForm button {
+      background: #004080;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    section #loginForm button:hover {
+      background: #003366;
+    }
+
+    body.user-dashboard {
+      background-color: #f0f0f0;
+}
+
+    body.admin-dashboard {
+      background-color: #e0e0e0;
+  }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+}

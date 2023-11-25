@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Usuário - Sistema de Gerenciamento de Refugiados</title>
+  <link rel="stylesheet" href="sgr.css">
+</head>
+
+<body class="user-dashboard">
+  <header>
+    <h1>Painel do Usuário</h1>
+  </header>
+
+  <section>
+    <div class="container">
+      <div id="main">
+        <h2>Bem-vindo ao seu Painel</h2>
+
+        <div id="profileWidget">
+          <h3>Seu Perfil</h3>
+          <ul>
+            <li>Nome: Maria</li>
+            <li>Email: maria@example.com</li>
+            <li>Profissão: Professor</li>
+          </ul>
+        </div>
+        <button onclick="accessBibleAPI()">Acessar API da Bíblia Digital</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Sistema de Gerenciamento de Refugiados</p>
+  </footer>
+
+  <script>
+    function accessBibleAPI() {
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(data => {
+          console.log('Dados da API da Bíblia Digital:', data);
+          alert('Acesso à API da Bíblia Digital bem-sucedido!');
+        })
+        .catch(error => {
+          console.error('Erro ao acessar a API da Bíblia Digital:', error);
+          alert('Erro ao acessar a API da Bíblia Digital.');
+        });
+    }
+  </script>
+</body>
+
+</html>

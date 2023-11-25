@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Administrador - Sistema de Gerenciamento de Refugiados</title>
+  <link rel="stylesheet" href="sgr.css">
+</head>
+
+<body>
+  <header>
+    <h1>Painel do Administrador</h1>
+  </header>
+
+  <section>
+    <div class="container">
+      <div id="main">
+        <h2>Bem-vindo ao Painel de Administração</h2>
+
+        <!-- Widget de Usuários -->
+        <div id="userWidget">
+          <h3>Usuários</h3>
+          <ul>
+            <li>Nome: João</li>
+            <li>Email: joao@example.com</li>
+            <li>Função: Engenheiro</li>
+          </ul>
+        </div>
+
+        <button onclick="generateCSV()">Gerar Arquivo CSV</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Sistema de Gerenciamento de Refugiados</p>
+  </footer>
+
+  <script>
+    function generateCSV() {
+      const csvData = 'Nome,Email,Idade,Religião,Ideologia,Profissão,Número de Filhos,Renda Familiar,Maior Grau de Formação\n' +
+        'João,joao@example.com,30,Cristão,Direita,Engenheiro,2,80000,Doutorado\n' +
+        'Maria,maria@example.com,25,Muçulmano,Esquerda,Professor,1,60000,Mestrado';
+
+      const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8' });
+
+      saveAs(blob, 'usuarios.csv');
+
+      alert('Arquivo CSV gerado com sucesso!');
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2023 Sistema de Gerenciamento de Refugiados</p>
+  </footer>
+</body>
+
+</html>

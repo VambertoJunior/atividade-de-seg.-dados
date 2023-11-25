@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gerenciamento de Refugiados</title>
+  <link rel="stylesheet" href="sgr.css">
+</head>
+
+<body>
+  <header>
+  </header>
+
+  <section>
+    <div class="container">
+      <div id="main">
+        <h2>Bem-vindo ao Sistema de Gerenciamento de Refugiados</h2>
+        <div id="loginForm">
+          <h3>Login ou Admin</h3>
+          <form id="userLoginForm">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+
+            <label for="loginPassword">Senha:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+            <a href="index.html"><button type="button" onclick="cadastra('cadastra')">Cadastra</button></a>
+            <button type="button" onclick="login('user')">Entrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function login(userType) {
+      let emailField, passwordField;
+
+      if (userType === 'user') {
+        emailField = document.getElementById('loginEmail');
+        passwordField = document.getElementById('loginPassword');
+      } else if (userType === 'admin') {
+        emailField = document.getElementById('adminLoginEmail');
+        passwordField = document.getElementById('adminLoginPassword');
+      }
+
+      const loginEmail = emailField.value;
+      const loginPassword = passwordField.value;
+
+      if (loginEmail === 'usuario@example.com' && loginPassword === 'senha123' && userType === 'user') {
+        alert('Login de Usuário bem-sucedido!');
+        window.location.href = 'user_dashboard.html';  do usuário
+      } else if (loginEmail === 'admin@example.com' && loginPassword === 'admin123' && userType === 'admin') {
+        alert('Login de Administrador bem-sucedido!');
+        window.location.href = 'admin_dashboard.html';  painel do admin
+      } else {
+        alert('Login falhou. Verifique suas credenciais.');
+      }
+    }
+
+    function accessBibleAPI() {
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(data => {
+          console.log('Dados da API da Bíblia Digital:', data);
+          alert('Acesso à API da Bíblia Digital bem-sucedido!');
+        })
+        .catch(error => {
+          console.error('Erro ao acessar a API da Bíblia Digital:', error);
+          alert('Erro ao acessar a API da Bíblia Digital.');
+        });
+    }
+
+    function generateCSV() {
+      const csvData = 'Nome,Email,Idade,Religião,Ideologia,Profissão,Número de Filhos,Renda Familiar,Maior Grau de Formação\n' +
+        'João,joao@example.com,30,Cristão,Direita,Engenheiro,2,80000,Doutorado\n' +
+        'Maria,maria@example.com,25,Muçulmano,Esquerda,Professor,1,60000,Mestrado';
+
+      const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8' });
+      saveAs(blob, 'usuarios.csv');
+      alert('Arquivo CSV gerado com sucesso!');
+    }
+  </script>
+</body>
+
+</html>
